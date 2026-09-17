@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Result</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: #f9f9f9; }
+        img { max-width: 600px; margin: 20px; border: 2px solid #ccc; }
+        a { display: block; margin-top: 30px; font-size: 18px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Detection Result</h1>
+    <p>Original Image:</p>
+    <img src="{{ url_for('static', filename='uploads/' + original) }}" alt="Original Image">
+    <p>Detected Defects:</p>
+    <img src="{{ url_for('static', filename='uploads/' + output) }}" alt="Detection Result">
+    <a href="{{ url_for('index') }}">← Detect Another Image</a>
+</body>
+</html>
